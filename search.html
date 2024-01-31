@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RecipieFinder | Search</title>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Jonathan L. Ashby" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <a name="top"></a>
+    <header>
+      <div class="logo">
+        <a href="index.html"><h1>RecipeFinder</h1></a>
+      </div>
+      <div class="nav">
+        <div class="searchBox">
+          <input
+            id="searchButton1"
+            class="searchInput"
+            type="text"
+            name="search"
+            placeholder="Search"
+          />
+          <button class="search-btn btn" href="#">
+            <i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="search-controls">
+        <div>
+          <input
+            id="searchButton2"
+            class="searchInput"
+            type="text"
+            name="search"
+            placeholder="Search."
+          />
+          <button class="search-btn btn" href="#">
+            <i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i>
+          </button>
+        </div>
+        <!-- <div class="display-btns">
+          <button class="btn" id="display-large">
+            <img src="Images/Display-Large.png" alt="Display Large" />
+          </button>
+          <button class="btn" id="display-grid">
+            <img src="Images/Display-Grid.png" alt="Display Small" />
+          </button>
+        </div> -->
+      </div>
+      <div id="resultsContainer" class=""></div>
+      <!-- <button id="loadMoreButton">Load More</button> -->
+    </main>
+    <footer>
+      <p>This site is powered by <a href="https://spoonacular.com/food-api" target="_blank">spoonacular API</a>.</p>
+      <p><a href="#top">to top</a></footer></p>
+    </footer>
+    <!-- Scripts -->
+    <script
+      src="https://kit.fontawesome.com/48c0986dd1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/results.js"></script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RecipieFinder |</title>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Jonathan L. Ashby" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <a name="top"></a>
+    <header>
+      <div class="logo">
+        <a href="index.html"><h1>RecipeFinder</h1></a>
+      </div>
+      <div class="nav">
+        <div class="searchBox">
+          <input
+            id="searchButton1"
+            class="searchInput"
+            type="text"
+            name="search"
+            placeholder="Search"
+          />
+          <button class="search-btn btn" href="#">
+            <i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="recipe">
+        <div>
+          <div>
+            <img id="recipeImg" scr="" alt="" />
+            <p id="recipeTitle"></p>
+          </div>
+          <div>
+            <div class="recipie-details">
+              <p>Total Time: <span id="totalTime">.</span></p>
+              <p><span id="servings"></span> servings.</p>
+              <p><a id="source"></a></p>
+            </div>
+            <p id="recipeDesc"></p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <ol id="recipeInstructions"></ol>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>This site is powered by <a href="https://spoonacular.com/food-api" target="_blank">spoonacular API</a>.</p>
+      <p><a href="#top">to top</a></footer></p>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/48c0986dd1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/recipe.js"></script>
+  </body>
+</html>

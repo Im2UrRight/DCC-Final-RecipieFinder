@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css?family=Inter:700|Inter:400");
+
+:root {
+  --text: hsl(284, 100%, 5%);
+  --background: hsl(288, 100%, 99%);
+  --primary: hsl(105, 100%, 37%);
+  --secondary: hsl(93, 86%, 86%);
+  --accent: hsl(105, 100%, 16%);
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Fonts */
+
+
+body {
+  font-family: "Inter", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+  font-weight: 400;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  margin: 0;
+  min-width: 375px;
+}
+
+body .home {
+  background-image: linear-gradient(to right top, var(--accent), var(--secondary), var(--primary));
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Inter";
+  font-weight: 700;
+}
+
+html {
+  font-size: 100%;
+  /* 16px */
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 4.21rem;
+  /* 67.36px */
+}
+
+h2 {
+  font-size: 3.158rem;
+  /* 50.56px */
+}
+
+h3 {
+  font-size: 2.369rem;
+  /* 37.92px */
+}
+
+h4 {
+  font-size: 1.777rem;
+  /* 28.48px */
+}
+
+h5 {
+  font-size: 1.333rem;
+  /* 21.28px */
+}
+
+small {
+  font-size: 0.75rem;
+  /* 12px */
+}
+
+a,
+a:visited {
+  color: var(--accent);
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+.warning_message {
+  color: var(--warning);
+}
+
+.error_message {
+  color: var(--error);
+}
+
+/* container */
+.home {
+  background-image: url(Images/home-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* header */
+header {
+  background-color: var(--background);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 3em;
+  border-bottom: 3px solid var(--accent);
+}
+
+header h1 {
+  background: -webkit-linear-gradient(60deg, var(--primary), var(--accent));
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  margin: 0px 12px;
+}
+
+
+/* search bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  /* Adjust the max-width as needed */
+  margin: 0 auto;
+}
+
+/* Search input */
+.search-input {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+/* Search button */
+.search-button {
+  background-color: var(--primary);
+  color: var(--background);
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Hover effect for the search button */
+.search-button:hover {
+  background-color: var(--accent);
+}
+
+/* main */
+main {
+  flex: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 8px 12px;
+}
+
+.idk {
+  display: grid;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.idk>div {
+  background-color: var(--background);
+  margin: auto;
+  padding: 12px;
+}
+
+/* search page */
+/* controlls */
+.search-controls {
+  display: flex;
+  height: 2.75em;
+  justify-content: space-between;
+  padding: 2px;
+  width: 100%;
+}
+
+.search-controls .searchInput,
+.search-controls .search-btn {
+  height: 100%;
+}
+
+
+/* results */
+#resultsContainer {
+  display: grid;
+}
+
+.recipe-card {
+  align-items: center;
+  width: 100%;
+  background-color: var(--secondary);
+  padding: 12px;
+  text-align: center;
+  /* box-shadow: 3px 3px 5px 6px #ccc; */
+}
+
+.recipe-card img {
+  display: block;
+  height: 220px;
+  width: 300px;
+  margin: auto;
+}
+
+/* Style for the main recipe container */
+#recipe {
+  background-color: var(--secondary);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+#recipe > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#recipe > div > div {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+#recipeImg {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+#recipeTitle {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-top: 10px;
+}
+
+#recipeDesc {
+  color: var(--text);
+  margin-top: 10px;
+}
+
+#recipeInstructions {
+  list-style-type: decimal;
+  padding-left: 20px;
+  color: var(--text);
+}
+
+#recipeInstructions li {
+  margin-bottom: 8px;
+}
+
+/* Footer styles */
+footer {
+  background-color: var(--secondary);
+  font-size: .85em;
+  padding: 10px;
+  text-align: center;
+  color: var(--text);
+}
+
+/* Styles for mobile */
+@media screen and (max-width: 575px) {
+  h1 {
+    font-size: 2.489rem;
+    /* 39.84px */
+  }
+
+  h2 {
+    font-size: 2.074rem;
+    /* 33.12px */
+  }
+
+  h3 {
+    font-size: 1.728rem;
+    /* 27.68px */
+  }
+
+  h4 {
+    font-size: 1.440rem;
+    /* 23.04px */
+  }
+
+  h5 {
+    font-size: 1.200rem;
+    /* 19.2px */
+  }
+
+  small {
+    font-size: 0.833rem;
+    /* 13.28px */
+  }
+  #resultsContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  header {
+    display: flex;
+    flex-direction: column; /* Change to column for mobile */
+    align-items: center;
+    width: 100%;
+    padding: 1em;
+  }
+  header h1 {
+    text-align: center;
+  }
+  header .search-input {
+    flex: 1;
+    width: 100%; /* Take full width for mobile */
+    margin-bottom: 8px; /* Add some spacing between input and button */
+  }
+  .search-controls {
+    display: none;
+  }
+  #recipe > div {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+
+  #recipe > div > div {
+    flex: 1;
+    margin-right: 0; /* Remove right margin on smaller screens */
+  }
+
+  #recipeTitle {
+    font-size: 1.25rem; /* Further reduce font size for smaller screens */
+  }
+}
+
+
+/* Styles for tablet */
+@media screen and (max-width: 991px) and (min-width: 576px) {
+ 
+  header {
+    display: flex;
+    flex-direction: column; /* Change to column for mobile */
+    align-items: center;
+    width: 100%;
+    padding: 1em;
+  }
+  header h1 {
+    text-align: center;
+  }
+  header .search-input {
+    flex: 1;
+    width: 100%; /* Take full width for mobile */
+    margin-bottom: 8px; /* Add some spacing between input and button */
+  }
+  #resultsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Styles for desktop */
+@media screen and (min-width: 992px) {
+  #resultsContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}
+
+/* animations */
